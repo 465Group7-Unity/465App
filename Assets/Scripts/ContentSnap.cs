@@ -5,17 +5,21 @@ using System.Collections;
 public class ContentSnap : MonoBehaviour
 {
 	public int contentSize = 40; // Height of the elements in the scrollbox.
-	public ScrollRect scroll;	// Set in inspector.
+	public ScrollRect scroll;   // Set in inspector.
+	public string selectedText;
 
 	float prevPos;
 	RectTransform ourTransform;
 	bool correcting = false;
+	Text[] children;
 
 	void Awake()
 	{
 		// Initial position will be the previous position.
 		ourTransform = GetComponent<RectTransform>();
 		prevPos = ourTransform.localPosition.y;
+		children = GetComponentsInChildren<Text>();
+		selectedText = children[0].text;
 	}
 	
 	// Update is called once per frame
@@ -40,6 +44,9 @@ public class ContentSnap : MonoBehaviour
 
 			//ourTransform.localPosition = new Vector2(ourTransform.localPosition.x, use);
 			StartCoroutine(Correct(use));
+
+			// Figure out what text we have selected now.
+			selectedText = children[(int)use / contentSize].text;
 		}
 		prevPos = ourTransform.localPosition.y;
 	}
