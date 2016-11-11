@@ -58,10 +58,11 @@ public class DataGrabber : MonoBehaviour
 	public static User matched = null;
 
 	// Fake user data.
+	// Pickier users should be higher up in this list.
 	public static User[] users = new User[] 
 	{
 		new User(
-		"Test",						// Name
+		"Bob Testman",				// Name
 		"None",						// Picture path
 		"3",						// Distance
 		"10",						// Price range
@@ -118,6 +119,17 @@ public class DataGrabber : MonoBehaviour
 		{
 			name_match.text = matched.name;
 			meet_text.text = "Meet " + matched.name + "!";
+		}
+
+		// This data comes from the places you have selected.
+		place.text = "Potential Location 1";
+		foreach(ToggleButton ii in chosen_places_data)
+		{
+			if (ii.toggled)
+			{
+				place.text = ii.GetComponentInChildren<Text>().text;
+				break;
+			}
 		}
 	}
 }
@@ -183,7 +195,7 @@ public class User
 			return false;
 
 		// Check gender.
-		if (DataGrabber.gender_data_s.selectedText != "None")
+		if (DataGrabber.gender_data_s.selectedText != "N/A")
 		{
 			if (DataGrabber.gender_data_s.selectedText != gender)
 				return false;
