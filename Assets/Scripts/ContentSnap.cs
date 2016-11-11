@@ -21,6 +21,11 @@ public class ContentSnap : MonoBehaviour
 		children = GetComponentsInChildren<Text>();
 		selectedText = children[0].text;
 	}
+
+	void OnEnable()
+	{
+		correcting = false;
+	}
 	
 	// Update is called once per frame
 	void Update ()

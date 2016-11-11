@@ -63,6 +63,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ContentSnap.cs" />
+    <Compile Include="Assets\Scripts\Controller.cs" />
+    <Compile Include="Assets\Scripts\DataGrabber.cs" />
     <Compile Include="Assets\Scripts\RotatingImage.cs" />
     <Compile Include="Assets\Scripts\ToggleButton.cs" />
   </ItemGroup>
