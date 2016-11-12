@@ -68,6 +68,15 @@ public class DataGrabber : MonoBehaviour
 		"10",						// Price range
 		new string[] {"American"},	// Array of cuisine types
 		"Male",						// Gender
+		"1"),						// Age difference
+        
+        new User(
+        "Bob2 Testman",				// Name
+		"None",						// Picture path
+		"1",						// Distance
+		"5",						// Price range
+		new string[] {"American"},	// Array of cuisine types
+		"Male",						// Gender
 		"1")						// Age difference
 	};
 
