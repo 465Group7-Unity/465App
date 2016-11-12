@@ -8,17 +8,19 @@ public class ToggleButton : MonoBehaviour
 
 	Button ourButton;
 	Image ourButtonImage;
+	Color ourButtonInitialColor;
 
 	// Use this for initialization
 	void Start ()
 	{
 		ourButton = GetComponent<Button>();
 		ourButtonImage = GetComponent<Image>();
+		ourButtonInitialColor = ourButtonImage.color;
 		ourButton.onClick.AddListener(() =>
 		{
 			if (toggled)
 			{
-				ourButtonImage.color = Color.white;
+				ourButtonImage.color = ourButtonInitialColor;
 			}
 			else
 			{

@@ -1,10 +1,9 @@
 fileFormatVersion: 2
-guid: b55d98b2c15b6a449b9dc29e86be491b
-timeCreated: 1478988942
+guid: 578d2e9c888de7d4188acc235f5b0e45
+timeCreated: 1478989198
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: box_0
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -30,8 +29,8 @@ TextureImporter:
   textureFormat: -1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: 0
-    aniso: 16
+    filterMode: -1
+    aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -39,29 +38,18 @@ TextureImporter:
   rGBM: 0
   compressionQuality: 50
   allowsAlphaSplitting: 0
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 20
+  spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites:
-    - name: box_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 3
-        height: 3
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 1, y: 1, z: 1, w: 1}
-      outline: []
+    sprites: []
     outline: []
   spritePackingTag: 
   userData: 

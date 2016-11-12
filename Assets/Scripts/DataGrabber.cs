@@ -32,7 +32,6 @@ public class DataGrabber : MonoBehaviour
 	// Match Screen
 	public ToggleButton[] chosen_places_data;
 
-
 	// Places where data needs to be sent. Set in inspector.
 	// Main screen.
 	public Text radius;
@@ -45,6 +44,7 @@ public class DataGrabber : MonoBehaviour
 	public Text name_match;
 	public Text time_match;
 	public Text[] places;
+	public Image match_image;
 
 	// Match Locked screen.
 	public Text meet_text;
@@ -52,6 +52,7 @@ public class DataGrabber : MonoBehaviour
 	public Text place;
 	public Text address;
 	public Text city;
+	public Image lock_image;
 
 	// Other things.
 	// The user we have matched with.
@@ -61,23 +62,86 @@ public class DataGrabber : MonoBehaviour
 	// Pickier users should be higher up in this list.
 	public static User[] users = new User[] 
 	{
-		new User(
+        new User(
 		"Bob Testman",				// Name
-		"None",						// Picture path
+		"d_male",						// Picture path
 		"3",						// Distance
 		"10",						// Price range
-		new string[] {"American"},	// Array of cuisine types
+		new string[] {"American,Italian"},	// Array of cuisine types
+		"Male",						// Gender
+		"2"),						// Age difference
+
+        new User(
+		"Alice Testman",				// Name
+		"d_female",						// Picture path
+		"3",						// Distance
+		"15",						// Price range
+		new string[] {"Mexican"},	// Array of cuisine types
+		"Female",						// Gender
+		"3"),						// Age difference
+
+        new User(
+		"Joe Smith",				// Name
+		"face1",						// Picture path
+		"3",						// Distance
+		"20",						// Price range
+		new string[] {"Japanese"},	// Array of cuisine types
+		"Male",						// Gender
+		"4"),						// Age difference
+
+        new User(
+		"Dan Test",				// Name
+		"face2",						// Picture path
+		"3",						// Distance
+		"25",						// Price range
+		new string[] {"Japanese, Chinese"},	// Array of cuisine types
+		"Male",						// Gender
+		"5"),						// Age difference
+
+        new User(
+		"Tony Testman",				// Name
+		"face3",						// Picture path
+		"3",						// Distance
+		"10",						// Price range
+		new string[] {"American, Indian, Italian"},	// Array of cuisine types
 		"Male",						// Gender
 		"1"),						// Age difference
-        
+
         new User(
-        "Bob2 Testman",				// Name
-		"None",						// Picture path
-		"1",						// Distance
+		"Sam Testman",				// Name
+		"face4",						// Picture path
+		"3",						// Distance
 		"5",						// Price range
-		new string[] {"American"},	// Array of cuisine types
+		new string[] {"Japanese"},	// Array of cuisine types
 		"Male",						// Gender
-		"1")						// Age difference
+		"2"),						// Age difference
+
+        new User(
+		"David Testman",				// Name
+		"face5",						// Picture path
+		"3",						// Distance
+		"15",						// Price range
+		new string[] {"American, Chinese"},	// Array of cuisine types
+		"Male",						// Gender
+		"3"),						// Age difference
+
+        new User(
+		"Chris Testman",				// Name
+		"face6",						// Picture path
+		"3",						// Distance
+		"20",						// Price range
+		new string[] {"Indian, American"},	// Array of cuisine types
+		"Male",						// Gender
+		"4"),						// Age difference
+
+         new User(
+		"Emily Testman",				// Name
+		"d_female",						// Picture path
+		"25",						// Distance
+		"10",						// Price range
+		new string[] {"Chinese"},	// Array of cuisine types
+		"Female",						// Gender
+		"5")						// Age difference
 	};
 
 	// Use this for initialization
@@ -126,6 +190,8 @@ public class DataGrabber : MonoBehaviour
 		// This data comes from whatever person you're matched to.
 		if (matched != null)
 		{
+			match_image.sprite = Resources.Load<Sprite>(matched.picture_path);
+			lock_image.sprite = Resources.Load<Sprite>(matched.picture_path);
 			name_match.text = matched.name;
 			meet_text.text = "Meet " + matched.name + "!";
 		}
@@ -187,7 +253,7 @@ public class User
 		{
 			cuisineList += ii;
 		}
-		Debug.Log(cuisineList);
+		//Debug.Log(cuisineList);
 
 		foreach (ToggleButton ii in DataGrabber.cuisine_data_s)
 		{
