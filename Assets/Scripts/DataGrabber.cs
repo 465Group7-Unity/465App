@@ -153,7 +153,7 @@ public class User
 	public string gender;           // Their gender, used in gender preference of user.
 	public string age_range;        // How far away they are from the app user's age.
 
-	public User(string new_name, string new_picpath, string new_dist, string new_price, string[] new_cuisine, string new_gender, string new_age_range)
+	public User(string new_name, string new_picpath, string new_dist, string new_price, string[] new_cuisine, string new_gender, string new_age_range, int startTime, int endTime)
 	{
 		name = new_name;
 		picture_path = new_picpath;
