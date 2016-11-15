@@ -24,7 +24,7 @@ public class RotatingImage : MonoBehaviour
 		{
 			//Debug.Log("FLIP");
 			ourImage.sprite = faces[idx % faces.Length];
-			idx++;
+			idx++; 
 
 			//ourImage.color = new Color(Random.Range(0f, 1f), Random.Range(0f, 1f), Random.Range(0f, 1f));
 		}
