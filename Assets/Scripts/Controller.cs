@@ -40,6 +40,12 @@ public class Controller : MonoBehaviour
 				currentScreen = "PendingScreenBG Fail";
 			}
 		}
+
+		// For quitting.
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Application.Quit();
+		}
 	}
 
 	User checkForMatch()
