@@ -63,7 +63,7 @@ public class DataGrabber : MonoBehaviour
 	public static User[] users = new User[] 
 	{
         new User(
-		"Bob Testman",				// Name
+		"Bob Smith",				// Name
 		"d_male",						// Picture path
 		"3",						// Distance
 		"10",						// Price range
@@ -72,7 +72,7 @@ public class DataGrabber : MonoBehaviour
 		"2"),						// Age difference
 
         new User(
-		"Alice Testman",				// Name
+		"Alice Smith",				// Name
 		"d_female",						// Picture path
 		"3",						// Distance
 		"15",						// Price range
@@ -90,7 +90,7 @@ public class DataGrabber : MonoBehaviour
 		"4"),						// Age difference
 
         new User(
-		"Dan Test",				// Name
+		"Dan Smith",				// Name
 		"face2",						// Picture path
 		"3",						// Distance
 		"25",						// Price range
@@ -99,7 +99,7 @@ public class DataGrabber : MonoBehaviour
 		"5"),						// Age difference
 
         new User(
-		"Tony Testman",				// Name
+		"Tony Smith",				// Name
 		"face3",						// Picture path
 		"3",						// Distance
 		"10",						// Price range
@@ -108,7 +108,7 @@ public class DataGrabber : MonoBehaviour
 		"1"),						// Age difference
 
         new User(
-		"Sam Testman",				// Name
+		"Sam Smith",				// Name
 		"face4",						// Picture path
 		"3",						// Distance
 		"5",						// Price range
@@ -117,7 +117,7 @@ public class DataGrabber : MonoBehaviour
 		"2"),						// Age difference
 
         new User(
-		"David Testman",				// Name
+		"David Smith",				// Name
 		"face5",						// Picture path
 		"3",						// Distance
 		"15",						// Price range
@@ -126,7 +126,7 @@ public class DataGrabber : MonoBehaviour
 		"3"),						// Age difference
 
         new User(
-		"Chris Testman",				// Name
+		"Chris Smith",				// Name
 		"face6",						// Picture path
 		"3",						// Distance
 		"20",						// Price range
@@ -135,7 +135,7 @@ public class DataGrabber : MonoBehaviour
 		"4"),						// Age difference
 
          new User(
-		"Emily Testman",				// Name
+		"Emily Smith",				// Name
 		"d_female",						// Picture path
 		"25",						// Distance
 		"10",						// Price range
