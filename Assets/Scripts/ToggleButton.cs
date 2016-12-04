@@ -5,6 +5,8 @@ using System.Collections;
 public class ToggleButton : MonoBehaviour
 {
 	public bool toggled = false;
+	public string title;
+	public Text childText;
 
 	Button ourButton;
 	Image ourButtonImage;
